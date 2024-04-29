@@ -1,0 +1,33 @@
+<!-- Commsor badge widget begin -->
+<script>
+  window.addEventListener('message', function (event) {
+    if (
+      typeof event.data === 'object' &&
+      event.data.id === 'commsor-connect' &&
+      event.data.type === 'ready'
+    ) {
+      const iframe = document.getElementById('commsor-connect');
+      if (iframe != null) {
+        iframe.style.display = 'block';
+      }
+    }
+  });
+</script>
+<iframe
+  id="commsor-connect"
+  title="Commsor Connect"
+  src="https://staging.bronto.commsor.com/widget/35401c2d-8357-4e07-9cf6-f10afdcafcf3"
+  width="400"
+  height="320"
+  style="
+    bottom: 0;
+    left: 0;
+    border: 0;
+    outline: 0;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 9999;
+  "
+></iframe>
+<!-- Commsor badge widget end -->
